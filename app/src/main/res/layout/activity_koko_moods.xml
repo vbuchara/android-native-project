@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KokoMoodsActivity">
+
+    <include layout="@layout/app_bar" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Escolha uma emoção"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBar" />
+
+    <ImageView
+        android:id="@+id/kokoImage"
+        android:layout_width="148dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="matrix"
+        android:src="@drawable/koko_aocf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kokoImage">
+
+        <CheckBox
+            android:id="@+id/checkSad"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Triste"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkHappy"
+            android:buttonTint="@color/teal_200"
+        />
+
+        <CheckBox
+            android:id="@+id/checkHappy"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Feliz"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:buttonTint="@color/teal_200"
+        />
+
+        <CheckBox
+            android:id="@+id/checkAngry"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Brava"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkSad"
+            android:buttonTint="@color/teal_200"
+        />
+
+        <CheckBox
+            android:id="@+id/checkFlushed"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Envergonhada"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkAngry"
+            android:buttonTint="@color/teal_200"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="205dp" />
+
+    <Spinner
+        android:id="@+id/emotionSpin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/kokoImage" />
+
+    <Switch
+        android:id="@+id/toggleToast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:checked="true"
+        android:minHeight="48dp"
+        android:text="Mostrar Toast?"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/emotionSpin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

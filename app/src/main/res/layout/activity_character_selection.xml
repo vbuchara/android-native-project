@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CharacterSelection">
+
+    <include layout="@layout/app_bar"/>
+
+    <ImageView
+        android:id="@+id/kokoImage"
+        android:layout_width="148dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBar"
+        app:srcCompat="@drawable/rat"
+    />
+
+    <RadioGroup
+        android:id="@+id/charSelector"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/kokoImage"
+        tools:layout_editor_absoluteX="0dp"
+    >
+
+        <RadioButton
+            android:id="@+id/radioNazrin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Nazrin"
+            android:buttonTint="@color/teal_200"
+        />
+
+        <RadioButton
+            android:id="@+id/radioKogasa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kogasa"
+            android:buttonTint="@color/teal_200"
+        />
+
+        <RadioButton
+            android:id="@+id/radioIchirin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ichirin and Uzan"
+            android:buttonTint="@color/teal_200"
+        />
+
+        <RadioButton
+            android:id="@+id/radioMurasa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Murasa"
+            android:buttonTint="@color/teal_200"
+        />
+
+        <RadioButton
+            android:id="@+id/radioShou"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shou"
+            android:buttonTint="@color/teal_200"
+        />
+
+        <RadioButton
+            android:id="@+id/radioByakuren"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Byakuren"
+            android:buttonTint="@color/teal_200"
+        />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
